@@ -15,9 +15,10 @@ public class FilterFunction {
         GWD.getDriver().get(ConfigReader.getProperty("URL2"));
         element.wait.until(ExpectedConditions.urlToBe(ConfigReader.getProperty("URL2")));
 
-        if (!element.acceptAllButton.isEmpty()) {
-            element.acceptAllButton.get(0).click();
-        }
+        // If cookies appear, please remove the comment lines below.
+//        if (!element.acceptAllButton.isEmpty()) {
+//            element.acceptAllButton.get(0).click();
+//        }
 
         element.wait.until(ExpectedConditions.visibilityOf(element.seeQAJobs));
         element.jsClick(element.seeQAJobs);
